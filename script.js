@@ -1,4 +1,15 @@
-// Function to open a new window with the article URL
+function updateTime() {
+    var now = new Date();
+    var hours = now.getHours().toString().padStart(2, '0');
+    var minutes = now.getMinutes().toString().padStart(2, '0');
+    var seconds = now.getSeconds().toString().padStart(2, '0');
+    var currentTime = hours + ':' + minutes + ':' + seconds;
+    document.getElementById('current-time').textContent = currentTime;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+
 function openArticle(url) {
     window.open(url, '_blank', 'width=800,height=600');
 }
@@ -27,7 +38,6 @@ window.onclick = function (event) {
     }
 };
 
-// Existing script for other functionalities
 $(document).ready(function () {
     var $html = $('html');
     var page = 1;
@@ -63,14 +73,12 @@ $(document).ready(function () {
             }
         });
 
-        // sticky navbar
         if (this.scrollY > 20) {
             $('.navbar').addClass('sticky');
         } else {
             $('.navbar').removeClass('sticky');
         }
 
-        // scroll-up button show
         if (this.scrollY > 500) {
             $('.scroll-up-btn').addClass('show');
         } else {
@@ -78,24 +86,20 @@ $(document).ready(function () {
         }
     });
 
-    // slide-up script
     $('.scroll-up-btn').click(function () {
         $('html').animate({ scrollTop: 0 });
         $('html').css('scrollBehavior', 'auto');
     });
 
-    // applying again smooth scroll on menu items click
     $('.navbar .menu li a').click(function () {
         $('html').css('scrollBehavior', 'smooth');
     });
 
-    // toggle menu
     $('.menu-btn').click(function () {
         $('.navbar .menu').toggleClass('active');
         $('.menu-btn i').toggleClass('active');
     });
 
-    // typing text animation script
     console.log('Checking if .typing element exists:', $('.typing').length);
 
     if ($('.typing').length) {
@@ -107,16 +111,6 @@ $(document).ready(function () {
         });
     }
 
-    if ($('.typing-2').length) {
-        var typed2 = new Typed('.typing-2', {
-            strings: ['Major In Software.', 'Dream Game Programmer'],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true,
-        });
-    }
-
-    // owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
@@ -196,11 +190,10 @@ document.addEventListener('DOMContentLoaded', function () {
     createDrops();
     animate();
 
-    // Update canvas size on window resize
     window.addEventListener('resize', function () {
         canvas.width = window.innerWidth;
         canvas.height = document.getElementById('home').offsetHeight;
-        drops.length = 0; // Clear current drops
-        createDrops(); // Recreate drops
+        drops.length = 0;
+        createDrops();
     });
 });

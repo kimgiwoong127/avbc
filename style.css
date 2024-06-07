@@ -357,17 +357,17 @@ section {
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* Modal Content (Image) */
@@ -446,7 +446,7 @@ section {
 /* Social Issue Section */
 .social-issue {
     background-color: rgb(211, 238, 221);
-    padding: 60px 0; /* 상하 패딩 추가 */
+    padding: 60px 0;
 }
 
 .social-issue .max-width {
@@ -464,9 +464,9 @@ section {
 
 .social-issue .issue-grid {
     display: flex;
-    gap: 20px; /* 그리드 아이템 사이 간격 */
-    align-items: flex-start; /* 아이템을 상단 정렬 */
-    justify-content: center; /* 아이템을 중앙 정렬 */
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .social-issue .main-issue {
@@ -495,23 +495,23 @@ section {
 
 .social-issue .card-grid {
     display: flex;
-    flex-direction: column; /* 세로로 배치 */
+    flex-direction: column;
     gap: 10px;
 }
 
 .social-issue .card-grid .grid-item {
     background: #fff;
-    padding: 10px; /* Reduced padding */
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #333;
-    width: 300px; /* 고정된 너비 */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+    width: 300px;
+    box-sizing: border-box;
 }
 
 .social-issue .card-grid .grid-item:nth-child(2) {
-    margin-top: -10px; /* Move the second item up */
+    margin-top: -10px;
 }
 
 .social-issue .card-grid .grid-item h3 {
@@ -523,7 +523,7 @@ section {
 .social-issue .card-grid .grid-item img {
     width: 100%;
     height: auto;
-    max-height: 200px; /* 이미지 최대 높이 설정 */
+    max-height: 200px;
     object-fit: cover;
     border-radius: 8px;
     transition: 0.3s;
@@ -545,11 +545,11 @@ section {
     }
 
     .social-issue .card-grid .grid-item {
-        width: 100%; /* Full width on mobile */
+        width: 100%;
     }
 
     .social-issue .main-issue {
-        max-width: 100%; /* Full width on mobile */
+        max-width: 100%;
     }
 }
 
@@ -557,10 +557,8 @@ section {
     margin-top: 40px;
 }
 
-/* 공통 스타일 */
 .skills-grid {
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     gap: 20px;
 }
 
@@ -571,34 +569,31 @@ section {
     background-color: #ffffff;
 }
 
-/* 개별 grid-item 스타일 */
 .grid-item h3 {
-    font-size: 24px; /* 제목 폰트 크기 */
+    font-size: 24px;
     font-weight: bold;
 }
 
-/* 각 grid-item 별 개별 조정 가능 */
 #skills .grid-item:nth-child(1) h3 {
-    font-size: 16px; /* 첫 번째 grid-item 제목 폰트 크기 */
+    font-size: 16px;
 }
 
 #skills .grid-item:nth-child(1) p {
-    font-size: 12px; /* 첫 번째 grid-item 본문 폰트 크기 */
+    font-size: 12px;
 }
 
 #skills .grid-item:nth-child(2) h3 {
-    font-size: 16px; /* 두 번째 grid-item 제목 폰트 크기 */
+    font-size: 16px;
 }
 
 #skills .grid-item:nth-child(2) p {
-    font-size: 10px; /* 두 번째 grid-item 본문 폰트 크기 */
+    font-size: 10px;
 }
 
 .future-plan .plan-grid .grid-item {
     margin-top: 0px;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .social-issue .card-grid {
         flex-direction: column;
@@ -659,7 +654,7 @@ section {
 
 .grid-item iframe {
     width: 100%;
-    height: 300px; /* 필요에 따라 높이를 조정할 수 있습니다 */
+    height: 300px;
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -672,45 +667,6 @@ section {
     position: relative;
     background-size: cover;
     background-attachment: fixed;
-}
-
-footer {
-    background: #111;
-    padding: 25px 23px;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    margin-top: auto;
-}
-
-footer .foot-text {
-    padding-top: 20px;
-}
-
-footer span a {
-    color: rgb(229, 156, 249);
-    text-decoration: none;
-}
-
-footer span a:hover {
-    text-decoration: underline;
-}
-
-footer .social-icon {
-    display: flex;
-    margin-bottom: 30px;
-    margin: 0 5px;
-    justify-content: center;
-}
-
-footer .social-item img {
-    height: 40px;
-    padding-right: 10px;
-    transition: 0.3s ease;
-}
-
-footer .social-item img:hover {
-    transform: scale(1.2);
 }
 
 /* responsive */
@@ -938,45 +894,6 @@ footer .social-item img:hover {
     .contact form {
         padding: 0 20px;
     }
-}
-
-footer {
-    background: #111;
-    padding: 25px 23px;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    margin-top: auto;
-}
-
-footer .foot-text {
-    padding-top: 20px;
-}
-
-footer span a {
-    color: rgb(229, 156, 249);
-    text-decoration: none;
-}
-
-footer span a:hover {
-    text-decoration: underline;
-}
-
-footer .social-icon {
-    display: flex;
-    margin-bottom: 30px;
-    margin: 0 5px;
-    justify-content: center;
-}
-
-footer .social-item img {
-    height: 40px;
-    padding-right: 10px;
-    transition: 0.3s ease;
-}
-
-footer .social-item img:hover {
-    transform: scale(1.2);
 }
 
 /* Introduction Section */
